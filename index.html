@@ -1,24 +1,199 @@
-<!-- @format -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <button onclick="PrintDeveloperbyMap()">
-      Console log Students with Map
-    </button>
-    <button onclick="PrintDeveloperbyForEach()">
-      Console log Students with foreach
-    </button>
-    <button onclick="addData()">Console New Data with 4th Employee</button>
-    <button onclick="removeAdmin()">Remove Admin/button>
-    <button onclick="concatenateArray()">concatenateArray</button>
+<html>
 
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <title>Crypto Market Data</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-container {
+  margin-bottom: 10px;
+  text-align: center;
+  
+  
+ 
+  
+}
+
+.sort-container {
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+#crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#crypto-table th,
+#crypto-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#crypto-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+#crypto-table td img {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+
+#search-button {
+  padding: 5px 10px;
+  float: right;
+}
+
+#search-input {
+  padding: 5px;
+  width: 100%;
+  
+}
+
+.sort-container button {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.sort-container button:focus {
+  outline: none;
+}
+
+.sort-container button.active {
+  font-weight: bold;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+#crypto-table td {
+  padding: 10px;
+  border-right: none;
+  border-left: none;
+}
+#price-0{
+  color: green;
+}
+.maindiv{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+}
+</style>
+
+<body>
+  <h1>Crypto Market Data</h1>
+  <div class="maindiv">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by name or Symbol">
+      
+    </div>
+    <div class="sort-container">
+      <button id="sort-market-cap-button">Sort by Market Cap</button>
+      <button id="sort-percentage-change-button">Sort by Percentage Change</button>
+    </div>
+  </div>
+  <table id="crypto-table">
+    <thead>
+     <!--... <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Symbol</th>
+        <th>Current Price</th>
+        <th>Total Volume</th>
+      </tr> --> 
+    </thead>
+    <tbody id="table-body">
+      <tr>
+        <td id="name-0"></td>
+        <td id="id-0"></td>
+        <td id="image-0"></td>
+        <td id="symbol-0"></td>
+        <td id="price-0"></td>
+        <td id="volume-0"></td>
+      </tr>
+      <tr>
+        <td id="name-1"></td>
+        <td id="id-1"></td>
+        <td id="image-1"></td>
+        <td id="symbol-1"></td>
+        <td id="price-1" style="color: green;"></td>
+        <td id="volume-1"></td>
+      </tr>
+      <tr>
+        <td id="name-2"></td>
+        <td id="id-2"></td>
+        <td id="image-2"></td>
+        <td id="symbol-2"></td>
+        <td id="price-2" style="color: green;" ></td>
+        <td id="volume-2"></td>
+      </tr>
+      <tr>
+        <td id="name-3"></td>
+        <td id="id-3"></td>
+        <td id="image-3"></td>
+        <td id="symbol-3"></td>
+        <td id="price-3" style="color: green;"></td>
+        <td id="volume-3"></td>
+      </tr>
+      <tr>
+        <td id="name-4"></td>
+        <td id="id-4"></td>
+        <td id="image-4"></td>
+        <td id="symbol-4"></td>
+        <td id="price-4" style="color: green;" ></td>
+        <td id="volume-4"></td>
+      </tr>
+      <tr>
+        <td id="name-5"></td>
+        <td id="id-5"></td>
+        <td id="image-5"></td>
+        <td id="symbol-5"></td>
+        <td id="price-5" style="color: green;"></td>
+        <td id="volume-5"></td>
+      </tr>
+      <tr>
+        <td id="name-6"></td>
+        <td id="id-6"></td>
+        <td id="image-6"></td>
+        <td id="symbol-6"></td>
+        <td id="price-6" style="color: green;"></td>
+        <td id="volume-6"></td>
+      </tr>
+      <tr>
+        <td id="name-7"></td>
+        <td id="id-7"></td>
+        <td id="image-7"></td>
+        <td id="symbol-7"></td>
+        <td id="price-7"  style="color: green;"></td>
+        <td id="volume-7"></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <script src="script.js"></script>
+</body>
+
 </html>
